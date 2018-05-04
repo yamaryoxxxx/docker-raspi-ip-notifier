@@ -5,7 +5,7 @@ MAINTAINER yamaryoxxxx@gmail.com
 RUN apt-get update
 
 # install python
-RUN apt-get install -y python2.7
+RUN apt-get install -y python
 
 # import script
 COPY mail-my-ip.py .

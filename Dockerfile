@@ -10,5 +10,10 @@ RUN apt-get install -y python2.7
 # import script
 COPY mail-my-ip.py .
 
+# variables
+ENV SEND_FROM sender@gmail.com
+ENV SEND_PASSWORD password-of-sender
+ENV SEND_TO someone@somedomain.com
+
 # entry point
 CMD python mail-my-ip.py

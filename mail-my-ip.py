@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 # get info
 time.sleep(args.wait)
-ifconfig = commands.getstatusoutput('ifconfig')[1]
+ifconfig = commands.getstatusoutput('/sbin/ifconfig')[1]
 
 print ifconfig
 # title and body

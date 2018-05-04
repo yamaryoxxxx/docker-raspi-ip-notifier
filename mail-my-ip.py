@@ -10,7 +10,6 @@ parser.add_argument('--sendto', type=str, help='TO addr', required=True)
 parser.add_argument('--sendfrom', type=str, help='FROM Gmail addr', required=True)
 parser.add_argument('--password', type=str, help='Password for FROM addr', required=True)
 parser.add_argument('--wait', type=int, default=15, help='wait time before send email(sec)')
-parser.add_argument('--host', type=str, help='hostname', required=True)
 args = parser.parse_args()
 
 # get info

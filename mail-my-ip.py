@@ -15,10 +15,11 @@ args = parser.parse_args()
 
 # get info
 time.sleep(args.wait)
-info = commands.getstatusoutput('ifconfig')[0]
+info = commands.getstatusoutput('ifconfig')[1]
+host = commands.getstatusoutput('hostname')[1]
 
 # title and body
-title = 'RasPi network info: %s' % args.host
+title = 'RasPi network info: %s' % host
 body = info
 
 # send mail

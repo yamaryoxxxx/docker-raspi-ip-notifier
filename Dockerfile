@@ -14,7 +14,7 @@ COPY mail-my-ip.py .
 ENV SEND_FROM sender@gmail.com
 ENV SEND_PASSWORD password-of-sender
 ENV SEND_TO someone@somedomain.com
-ENV WAIT 10
+ENV WAIT 0
 
 # entry point
 CMD python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO --wait $WAIT

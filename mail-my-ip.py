@@ -15,12 +15,11 @@ args = parser.parse_args()
 
 # get info
 time.sleep(args.wait)
-ifconfig = commands.getstatusoutput('/sbin/ifconfig')[1]
+info = commands.getstatusoutput('ip route get 1 | awk '{print $NF;exit}')[0]
 
-print ifconfig
 # title and body
 title = 'RasPi network info: %s' % args.host
-body = ifconfig
+body = info
 
 # send mail
 smtpserver = smtplib.SMTP('smtp.gmail.com', 587)

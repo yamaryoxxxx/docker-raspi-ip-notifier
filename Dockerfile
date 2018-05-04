@@ -18,4 +18,4 @@ ENV WAIT 10
 ENV HOSTNAME MyRaspberryPi
 
 # entry point
-CMD sleep 30 && python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO --wait $WAIT --host $HOSTNAME
+CMD python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO --wait $WAIT --host $HOSTNAME

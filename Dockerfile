@@ -16,4 +16,4 @@ ENV SEND_PASSWORD password-of-sender
 ENV SEND_TO someone@somedomain.com
 
 # entry point
-CMD python mail-my-ip.py
+CMD sleep 30 && python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO

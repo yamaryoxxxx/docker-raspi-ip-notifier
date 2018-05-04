@@ -11,8 +11,8 @@ parser.add_argument('--password', type=str, help='Password for FROM addr', requi
 args = parser.parse_args()
 
 # get info
-ifconfig = commands.getstatusoutput('ifconfig')
-hostname = commands.getstatusoutput('hostname')
+ifconfig = commands.getstatusoutput('ifconfig')[1]
+hostname = commands.getstatusoutput('hostname')[1]
 
 print ifconfig
 print hostname

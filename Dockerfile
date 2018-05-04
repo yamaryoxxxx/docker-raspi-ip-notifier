@@ -5,7 +5,7 @@ MAINTAINER yamaryoxxxx@gmail.com
 RUN apt-get update
 
 # install python
-RUN apt-get install -y python
+RUN apt-get install -y python net-tools
 
 # import script
 COPY mail-my-ip.py .
@@ -15,7 +15,6 @@ ENV SEND_FROM sender@gmail.com
 ENV SEND_PASSWORD password-of-sender
 ENV SEND_TO someone@somedomain.com
 ENV WAIT 10
-ENV HOSTNAME MyRaspberryPi
 
 # entry point
-CMD python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO --wait $WAIT --host $HOSTNAME
+CMD python mail-my-ip.py --sendfrom $SEND_FROM --password $SEND_PASSWORD --sendto $SEND_TO --wait $WAIT

@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 # get info
 time.sleep(args.wait)
-info = commands.getstatusoutput('ip route get 1 | awk '{print $NF;exit}')[0]
+info = commands.getstatusoutput("ip route get 1 | awk '{print $NF;exit}")[0]
 
 # title and body
 title = 'RasPi network info: %s' % args.host

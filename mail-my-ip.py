@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 import commands
 import time
+import signal
 
 # parse args
 parser = argparse.ArgumentParser(description='Send private IP info via email.')
@@ -33,3 +34,6 @@ msg['From'] = args.sendfrom
 msg['To'] = args.sendto
 smtpserver.sendmail(args.sendfrom, [args.sendto], msg.as_string())
 smtpserver.quit()
+
+# sleep forever
+signal.pause()

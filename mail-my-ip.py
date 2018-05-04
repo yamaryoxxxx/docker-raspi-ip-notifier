@@ -14,6 +14,8 @@ args = parser.parse_args()
 ifconfig = commands.getstatusoutput('ifconfig')
 hostname = commands.getstatusoutput('hostname')
 
+print ifconfig
+print hostname
 # title and body
 title = 'RasPi network info: %s' % hostname
 body = ifconfig
